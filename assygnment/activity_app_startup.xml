@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-android:background="@color/white"
-    tools:context=".MainActivity">
+    android:background="@color/white"
+    tools:context=".app_startup">
 
     <ImageView
         android:id="@+id/socially_logo"
@@ -20,10 +20,11 @@ android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
+        android:id="@+id/from_p1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="from"
-        android:textColor="@color/from_color"
+        android:textColor="@color/blue_grey"
         android:textSize="30dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,10 +34,11 @@ android:background="@color/white"
         />
 
     <TextView
+        android:id="@+id/SMD_p1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SMD"
-        android:textColor="@color/SMD_color"
+        android:textColor="@color/dark_red_pink"
         android:textSize="50dp"
         android:textStyle="bold"
 
