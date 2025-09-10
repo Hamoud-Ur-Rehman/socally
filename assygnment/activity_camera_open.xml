@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".highlights_page"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/cat_pic"
+        android:layout_width="0dp"
+        android:layout_height="650dp"
+        android:src="@drawable/my_post_pic"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
+    <ImageView
+        android:id="@+id/settings_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/settings_icon"
+        app:tint="@color/white"
+
+
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <View
+        android:id="@+id/circle_outer_click"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/white_circle"
+        android:backgroundTint="@color/dark_grey"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="100dp"/>
+
+    <View
+        android:id="@+id/circle_inner_click"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/white_circle"
+        android:backgroundTint="@color/white"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="110dp"/>
+
+    <View
+        android:id="@+id/lightning_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/lighting_icon"
+        android:backgroundTint="@color/white"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/circle_outer_click"
+        android:layout_marginBottom="110dp"
+        android:layout_marginEnd="30dp"/>
+
+
+    <View
+        android:id="@+id/refresh_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/autorenew_icon"
+        android:backgroundTint="@color/white"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/circle_outer_click"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="110dp"
+        android:layout_marginEnd="60dp"
+        />
+
+    <View
+        android:id="@+id/add_reaction_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/add_reaction_icon"
+        android:backgroundTint="@color/white"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/circle_outer_click"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="110dp"
+        android:layout_marginStart="80dp"
+        />
+
+
+    <ImageView
+        android:id="@+id/call_pfp_icon"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:src="@drawable/call_icon_pfp"
+
+        android:background="@drawable/call_pfp"
+        android:clipToOutline="true"
+        android:scaleType="centerCrop"
+
+        app:layout_constraintTop_toTopOf="@id/lightning_icon"
+        app:layout_constraintBottom_toBottomOf="@id/lightning_icon"
+        app:layout_constraintEnd_toStartOf="@id/lightning_icon"
+        android:layout_marginEnd="16dp"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <Button
+        android:id="@+id/close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="✖"
+        android:textSize="30sp"
+        android:textColor="@android:color/white"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
