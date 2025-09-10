@@ -1,0 +1,410 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".search_user">
+
+    <EditText
+        android:id="@+id/search_field"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:hint="Search..."
+        android:textColor="@color/dark_grey"
+        android:background="@drawable/grey_box_p2"
+        android:paddingStart="40dp"
+        android:inputType="text"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:id="@+id/search_icon_ontop"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/search_icon"
+
+        app:layout_constraintStart_toStartOf="@id/search_field"
+        app:layout_constraintTop_toTopOf="@id/search_field"
+        app:layout_constraintBottom_toBottomOf="@id/search_field"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/clear_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="✕"
+        android:textSize="16sp"
+        android:textColor="@color/dark_grey"
+
+        app:layout_constraintEnd_toEndOf="@id/search_field"
+        app:layout_constraintTop_toTopOf="@id/search_field"
+        app:layout_constraintBottom_toBottomOf="@id/search_field"
+        android:layout_marginEnd="8dp"/>
+
+    <Button
+        android:id="@+id/extra_button"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        android:text="Clear"
+        android:textSize="18sp"
+        android:textColor="@color/dirty_red_pink"
+
+        app:layout_constraintStart_toEndOf="@id/search_field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/search_field"
+        app:layout_constraintBottom_toBottomOf="@id/search_field"/>
+
+
+    <LinearLayout
+        android:id="@+id/nav_bar_search"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintTop_toBottomOf="@id/search_field"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Top"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Accounts"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/dark_grey" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Tags"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/dark_grey" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Places"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/dark_grey" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/black_rule_underline"
+        android:layout_width="103dp"
+        android:layout_height="3dp"
+        android:background="@color/black"
+
+        app:layout_constraintTop_toBottomOf="@id/nav_bar_search"
+        app:layout_constraintStart_toStartOf="@id/nav_bar_search"
+        />
+
+    <LinearLayout
+        android:id="@+id/results_container"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:weightSum="6"
+        app:layout_constraintTop_toBottomOf="@id/nav_bar_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Box 1 -->
+        <LinearLayout
+            android:id="@+id/result_box_1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/search1_pfp"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/search1_pfp"
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/user1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/other_user2"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Daniyal Hussain"
+                    android:textSize="14sp"
+                    android:textColor="@color/dark_grey"
+                    android:layout_below="@id/user1"
+                    android:layout_marginStart="20dp"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!-- Box 2 -->
+        <LinearLayout
+            android:id="@+id/result_box_2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/search2_pfp"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/search2_pfp"
+                />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/user2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="bard_of_Avon"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Will ShakesP"
+                    android:textSize="14sp"
+                    android:textColor="@color/dark_grey"
+                    android:layout_below="@id/user2"
+                    android:layout_marginStart="20dp"/>
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+        <!-- Box 3 -->
+        <LinearLayout
+            android:id="@+id/result_box_3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/search3_pfp"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/search3_pfp"
+                />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/user3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="uzbek_123"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Uzbekistan "
+                    android:textSize="14sp"
+                    android:textColor="@color/dark_grey"
+                    android:layout_below="@id/user3"
+                    android:layout_marginStart="20dp"/>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <!-- Box 4 -->
+        <LinearLayout
+            android:id="@+id/result_box_4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/search4_pfp"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/search4_pfp"
+                />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/user4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="bradpittofflcial"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Brad Pitt"
+                    android:textSize="14sp"
+                    android:textColor="@color/dark_grey"
+                    android:layout_below="@id/user4"
+                    android:layout_marginStart="20dp"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+
+        <!-- Box 5 -->
+        <LinearLayout
+            android:id="@+id/result_box_5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/search5_pfp"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/search5_pfp"
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/user5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/other_user3"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Ahmed Mujtaba "
+                    android:textSize="14sp"
+                    android:textColor="@color/dark_grey"
+                    android:layout_below="@id/user5"
+                    android:layout_marginStart="20dp"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!-- Box 6 -->
+        <LinearLayout
+            android:id="@+id/result_box_6"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/search6_pfp"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/search6_pfp"
+                />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/user6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#cars"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="1M+ posts "
+                    android:textSize="14sp"
+                    android:textColor="@color/dark_grey"
+                    android:layout_below="@id/user6"
+                    android:layout_marginStart="20dp"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
