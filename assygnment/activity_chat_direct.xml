@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chat_direct">
+
+
+    <EditText
+        android:id="@+id/msg_field"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Message..."
+        android:textColor="@color/dark_grey"
+        android:background="@drawable/grey_box_p2"
+        android:paddingStart="40dp"
+        android:inputType="text"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:layout_margin="30dp"
+        />
+
+    <ImageView
+
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/camera_icon2"
+        app:tint="@color/dirty_red_pink"
+
+        app:layout_constraintStart_toStartOf="@id/msg_field"
+        app:layout_constraintTop_toTopOf="@id/msg_field"
+        app:layout_constraintBottom_toBottomOf="@id/msg_field"
+        android:layout_marginStart="10dp"/>
+
+    <ImageView
+
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/mic_icon"
+        app:tint="@color/black"
+
+        app:layout_constraintEnd_toEndOf="@id/msg_field"
+        app:layout_constraintTop_toTopOf="@id/msg_field"
+        app:layout_constraintBottom_toBottomOf="@id/msg_field"
+        android:layout_marginEnd="70dp"/>
+
+    <ImageView
+
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/gallery_icon"
+        app:tint="@color/black"
+
+        app:layout_constraintEnd_toEndOf="@id/msg_field"
+        app:layout_constraintTop_toTopOf="@id/msg_field"
+        app:layout_constraintBottom_toBottomOf="@id/msg_field"
+        android:layout_marginEnd="40dp"/>
+
+    <ImageView
+
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/sticker_icon"
+        app:tint="@color/black"
+
+
+        app:layout_constraintEnd_toEndOf="@id/msg_field"
+        app:layout_constraintTop_toTopOf="@id/msg_field"
+        app:layout_constraintBottom_toBottomOf="@id/msg_field"
+        android:layout_marginEnd="10dp"
+        />
+
+
+    <EditText
+        android:id="@+id/chat_msg_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chat_box"
+        android:padding="12dp"
+        android:backgroundTint="@color/blue_grey"
+
+        android:text="aoe ajo"
+        android:textColor="@color/black"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/msg_field"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/chat_msg_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chat_box"
+        android:padding="12dp"
+
+        android:text="chor game aa"
+        android:textColor="@color/black"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/chat_msg_1"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/chat_msg_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chat_box"
+        android:backgroundTint="@color/blue_grey"
+        android:padding="12dp"
+
+        android:text="bs yr jharu laga rha"
+        android:textColor="@color/black"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/chat_msg_2"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/chat_msg_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chat_box"
+        android:padding="12dp"
+
+        android:text="sup bro"
+        android:textColor="@color/black"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/chat_msg_3"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/chat_msg_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chat_box"
+        android:padding="12dp"
+
+        android:text="hello"
+        android:textColor="@color/black"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/chat_msg_4"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4:49 PM"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/chat_msg_5"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/mychats"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/icon_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/back_icon"
+            />
+
+
+        <ImageView
+            android:padding="3"
+            android:layout_weight="1"
+            android:id="@+id/search5_pfp"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/search5_pfp"
+            />
+
+        <TextView
+            android:id="@+id/my_chat_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:text="@string/other_user3"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/chat_call_icon"
+
+            android:gravity="center"
+            app:tint="@color/black"
+            android:padding="8dp"
+            />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/info_icon"
+            android:padding="8dp"
+            app:tint="@color/dirty_red_pink"
+
+            android:gravity="center"
+            android:textColor="@color/dirty_red_pink"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
